@@ -1,0 +1,28 @@
+{
+  "app": {
+    "title": "Shipany Subtitle Tool",
+    "description": "Tools for generating and syncing YouTube subtitles"
+  },
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "retry": "Retry"
+  },
+  "errors": {
+    "network": "Network error. Please check your connection.",
+    "not_found": "Not found.",
+    "unknown": "An unknown error occurred."
+  },
+  "buttons": {
+    "upload": "Upload",
+    "download": "Download",
+    "generate": "Generate subtitles",
+    "translate": "Translate"
+  },
+  "localeNames": {
+    "en": "English",
+    "zh": "中文"
+  }
+}
