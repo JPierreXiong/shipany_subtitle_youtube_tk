@@ -1,15 +1,19 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
 import { createMDX } from 'fumadocs-mdx/next';
+
 import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/core/i18n/request.ts');
+
+export default withNextIntl({
+  // 这里可以写你的 Next.js 配置
+  reactStrictMode: true,
+});
 
 const withMDX = createMDX();
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
-
-const withNextIntl = createNextIntlPlugin({
-  requestConfig: './src/core/i18n/request.ts',
 });
 
 /** @type {import('next').NextConfig} */
@@ -42,8 +46,4 @@ const nextConfig = {
   },
   reactCompiler: true,
 };
-import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin('./src/core/i18n/request.ts');
-
-export default withBundleAnalyzer(withNextIntl(withMDX(nextConfig)));
